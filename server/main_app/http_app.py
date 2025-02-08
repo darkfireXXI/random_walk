@@ -91,7 +91,7 @@ async def login(info: Request):
 
 @app.get("/category-group/list")
 async def category_group_list():
-    return category_orchestration.list_all_category_groups()
+    return await category_orchestration.list_all_category_groups()
 
 
 @app.post("/category-group/like")
@@ -130,7 +130,7 @@ async def category_dislike(info: Request):
     req_info = await info.json()
     user_uuid = req_info["user_uuid"]
     category_uuid = req_info["category_uuid"]
-    return category_orchestration.dislike_category(user_uuid, category_uuid)
+    return await category_orchestration.dislike_category(user_uuid, category_uuid)
 
 
 @app.post("/site/visit")
@@ -138,7 +138,7 @@ async def site_visit(info: Request):
     req_info = await info.json()
     user_uuid = req_info["user_uuid"]
     site_uuid = req_info["site_uuid"]
-    return site_orchestration.visit_site(user_uuid, site_uuid)
+    return await site_orchestration.visit_site(user_uuid, site_uuid)
 
 
 @app.post("/site/like")
@@ -146,7 +146,7 @@ async def site_like(info: Request):
     req_info = await info.json()
     user_uuid = req_info["user_uuid"]
     site_uuid = req_info["site_uuid"]
-    return site_orchestration.like_site(user_uuid, site_uuid)
+    return await site_orchestration.like_site(user_uuid, site_uuid)
 
 
 @app.post("/site/dislike")
@@ -154,21 +154,21 @@ async def site_dislike(info: Request):
     req_info = await info.json()
     user_uuid = req_info["user_uuid"]
     site_uuid = req_info["site_uuid"]
-    return site_orchestration.dislike_site(user_uuid, site_uuid)
+    return await site_orchestration.dislike_site(user_uuid, site_uuid)
 
 
 @app.post("/sites/liked")
 async def sites_liked(info: Request):
     req_info = await info.json()
     user_uuid = req_info["user_uuid"]
-    return site_orchestration.get_user_liked_sites(user_uuid)
+    return await site_orchestration.get_user_liked_sites(user_uuid)
 
 
 @app.post("/sites/visited")
 async def site_visited(info: Request):
     req_info = await info.json()
     user_uuid = req_info["user_uuid"]
-    return site_orchestration.get_user_visited_sites(user_uuid)
+    return await site_orchestration.get_user_visited_sites(user_uuid)
 
 
 @app.post("/random_walk")

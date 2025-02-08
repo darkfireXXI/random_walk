@@ -1,14 +1,16 @@
 body, html {
     height: 100%;
+    width: 100%;
     margin: 0;
     font-family: Comic Sans MS, Helvetica, Arial, sans-serif;
     font-style: normal;
+/*    font-size: 16ev;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #000000;
+/*    background-image: linear-gradient(red, yellow);*/
+    background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
 }
 
 .landing-header {
@@ -17,15 +19,29 @@ body, html {
     right: 0;
     padding: 10px;
     background-color: transparent;
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
+}
+
+.home-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #666666;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 .top-right-btn {
     margin-left: 10px;
     padding: 10px 20px;
+    text-align: center;
     font-size: 16px;
+    justify-content: center;
     cursor: pointer;
     border: none;
     background-color: #000000;
@@ -36,16 +52,59 @@ body, html {
 }
 
 .center-btn {
+    margin: 0 auto;
     padding: 10px 20px;
     text-align: center;
     font-size: 16px;
+    justify-content: center;
     cursor: pointer;
     border: none;
-    background-color: #000000;
+    background-color: black;
     color: white;
     border-radius: 5px;
     font-family: Helvetica, Arial, sans-serif;
     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.random-walk-btn {
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-family: Comic Sans MS, Helvetica, Arial, sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.user-btn {
+    margin-left: 10px;
+    padding: 0px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 100%;
+    font-size: 26px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-btn i {
+  position: relative;
+  top: 1px;
+  left: 0px;
+}
+
+.btn:hover {
+    background-color: #ff6f00;
+    transform: scale(1.05);
 }
 
 .plain-text-btn {
@@ -60,10 +119,6 @@ body, html {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #ff6f00;
-    transform: scale(1.05);
-}
 
 .landing {
     text-align: center;
@@ -79,12 +134,12 @@ body, html {
 }
 
 .landing h2 {
-    font-size: 2em;
+/*    font-size: 2em;*/
     margin: 10px 0px;
 }
 
 .landing h3 {
-    font-size: 1.5em;
+/*    font-size: 1.5em;*/
     margin: 10px 0px;
 }
 
@@ -95,6 +150,10 @@ body, html {
     background: rgba(0, 0, 0, 0.75);
     padding: 25px;
     border-radius: 50px;
+}
+
+.input-box {
+    padding: 0.5px;
 }
 
 .basic-info {
@@ -109,26 +168,148 @@ body, html {
 .form h1 {
     text-align: center;
     color: white;
-    font-size: 2em;
-    margin: 10px 0;
+    margin: 10px 0px;
 }
 
 .form h2 {
-    font-size: 0.5em;
-    margin: 10px 0;
+    margin: 10px 0px;
 }
 
 .form h3 {
-    font-size: 0.5em;
-    margin: 10px 0;
+    margin: 10px 0px;
 }
 
 
 
-.category {
+
+
+
+.user-dropdown {
+    position: relative;
     display: inline-block;
-    margin: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 125px;
+    right: -10px;
+    top: 100%;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #cccccc;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+#user-liked-categories-container-header {
+    width: 270px;
+    height: 85%;
+    position: absolute;
+    top: 76px;
+    left: 10px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+
+}
+
+
+
+#user-liked-categories-container {
+    width: 250px;
+    height: 85%;
+    overflow-y: scroll;
+    padding: 0px 10px;
+    border-radius: 10px;
+    background-color: white;
+    align-content: center;
+/*    display: flex;*/
+/*    justify-content: left;*/
+/*    position: absolute;*/
+/*    margin-left: 10px;*/
+/*    margin-right: 100;*/
+/*    margin-top: 10px;*/
+/*    position: absolute;*/
+/*    top: 76px;*/
+/*    left: 10px;*/
+
+/*    justify-content: center;*/
+/*    align-content: center;*/
+/*    text-align: center;*/
+
+}
+
+/* Style the list */
+#category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+/*    align-content: center;*/
+/*    display: flex;*/
+    justify-content: left;
+/*    text-align: left;*/
+/*    position: absolute;*/
+/*    margin-left: 0;*/
+
+}
+
+/* Style each list item */
+#category-list li {
+    background-color: #e0e0e0;
+    margin: 5px 0;
     padding: 10px;
-    border: 1px solid #ccc;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+/*    align-content: center;*/
+    display: flex;
+    justify-content: left;
+}
+
+/* Optional: Add hover effect on list items */
+#category-list li:hover {
+    background-color: #ffffd0;
+/*    align-content: center;*/
+    justify-content: left;
+}
+
+
+.empty-state-button {
+    margin: 10px 0px;
+    padding: 10px 20px;
+    background-color: #ff3333; /* Red background for emphasis */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none; /* Initially hide the button */
+}
+
+.categories-list {
+    flex-grow: 1; /* This allows the categories list to take the remaining space */
+}
+
+/* Optional: If you want to show the button when the list is empty */
+.menu-container.empty .empty-state-button {
+    display: block; /* Show button only when the container has the 'empty' class */
 }

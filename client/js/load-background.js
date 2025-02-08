@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function()
         const images = ['apocalypse-explorer.jpg', 'aurora.jpg', 'color-panels.jpg', 'color-splash.jpg', 'space-explorer.jpg', 'tile-tunnel.jpg'];
         const randomImage = images[Math.floor(Math.random() * images.length)];
         document.body.style.backgroundImage = `url('${imgsFolder}${randomImage}')`;
+        document.body.style.backgroundPosition = 'center';
+        document.body.style.backgroundSize = 'cover';
+        // document.body.style.backgroundRepeat = 'no-repeat';
     }
 );
 
