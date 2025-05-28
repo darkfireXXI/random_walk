@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Walk: Home</title>
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="home-header">
+        <button class="btn random-walk-btn">Random Walk</button>
+        <div class="user-dropdown">
+            <button class="btn user-btn">
+                <i class='bx bxs-user' ></i>
+            </button>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <i class='bx bxs-user-detail' ></i>
+                        Profile
+                    </a>
+                    <a href="#">
+                        <i class='bx bxs-cog' ></i>
+                        Settings
+                    </a>
+                </div>
+        </div>
+    </div>
+
+    <div id=user-liked-categories-container-header>
+        <h3>Interests</h3>
+        <hr>
+        <button class="empty-state-button" id="noCategoriesButton">Nothing interesting? Why don't you try finding something here!</button>
+        <div id="user-liked-categories-container">
+            <ul id="category-list"></ul>
+        </div>
+    </div>
+
+    <div id=user-liked-categories-container-header1>
+        <h3>Favorite Sites</h3>
+        <hr>
+        <button class="empty-state-button" id="noCategoriesButton">Nothing interesting? Why don't you try finding something here!</button>
+        <div id="user-liked-categories-container">
+            <ul id="category-list"></ul>
+        </div>
+    </div>
+
+    <script src="js/load-category-groups.js"></script>
+</body>
+</html>
