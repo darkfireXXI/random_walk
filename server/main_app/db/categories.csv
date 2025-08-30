@@ -1,4 +1,4 @@
-﻿category_group,category
+category_group,category
 animals,birds
 animals,cats
 animals,dogs
@@ -13,14 +13,14 @@ outdoors,forestry
 outdoors,hiking
 outdoors,nature
 outdoors,survival
-desgin,advertising
-desgin,architecture
-desgin,computer aided design
-desgin,computer graphics
-desgin,interior design
-desgin,graphic design
-desgin,industrial design
-desgin,photoshop
+design,advertising
+design,architecture
+design,computer aided design
+design,computer graphics
+design,interior design
+design,graphic design
+design,industrial design
+design,photoshop
 fine arts,art history
 fine arts,arts
 fine arts,drawing
@@ -164,7 +164,6 @@ home and garden,construction
 home and garden,gardening
 home and garden,home improvement
 home and garden,homemaking
-home and garden,interior design
 home and garden,landscaping
 home and garden,restoration
 travel,hotels
@@ -438,7 +437,6 @@ development,shareware
 development,software
 development,web development
 development,windows development
-robotics,robotics
 gadgets,amateur radio
 gadgets,audio equipment
 gadgets,cell phones
